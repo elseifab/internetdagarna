@@ -1,0 +1,16 @@
+{
+    "name": "elseif/internetdagarna",
+    "description": "Automatisk hantering för WordPress-projekt",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Ek",
+            "email": "andreas@elseif.se"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "laravel/homestead": "^3.0"
+    }
+}
