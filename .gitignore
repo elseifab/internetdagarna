@@ -1,2 +1,4 @@
 /vendor/
 .vagrant
+.env
+public/wp

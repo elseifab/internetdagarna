@@ -9,8 +9,27 @@
             "email": "andreas@elseif.se"
         }
     ],
-    "require": {},
+    "require": {
+        "composer/installers": "^1.2",
+        "johnpbloch/wordpress": "^4.6",
+        "vlucas/phpdotenv": "^2.4",
+        "wp-cli/wp-cli": "^0.25.0"
+    },
     "require-dev": {
+        "symfony/console": "~2",
+        "symfony/debug": "~2",
+        "symfony/finder": "~2",
+        "symfony/process": "~2",
+        "symfony/yaml": "~2",
+        "deployer/deployer":"~4",
         "laravel/homestead": "^3.0"
+    },
+    "extra": {
+        "installer-paths": {
+            "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "public/wp"
     }
 }
