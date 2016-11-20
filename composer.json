@@ -2,6 +2,7 @@
     "name": "elseif/internetdagarna",
     "description": "Automatisk hantering för WordPress-projekt",
     "type": "project",
+    "version": "1.0",
     "license": "MIT",
     "authors": [
         {
