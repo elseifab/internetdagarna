@@ -6,16 +6,18 @@ class SimpleTest extends TestCase
 {
     private static $casperBinPath = '/usr/bin/';
 
-    public static function setUpBeforeClass() {
-        if (!file_exists(self::$casperBinPath .  'casperjs')) {
+    public static function setUpBeforeClass()
+    {
+        // OSX global install
+        if (file_exists("/usr/local/bin/casperjs")) {
+            self::$casperBinPath = "/usr/local/bin/";
+        } elseif (!file_exists(self::$casperBinPath . 'casperjs')) {
             self::$casperBinPath = 'node_modules/casperjs/bin/';
         }
     }
 
     public function testPageContent()
     {
-        throw new Exception("OK!");
-
         $casper = new Casper(self::$casperBinPath);
 
         $screenshotFileName = "startpage-" . date('Y-m-d-H-i-s') . ".png";

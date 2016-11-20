@@ -77,19 +77,4 @@ task('tests', function () {
     writeln('Vagrant Unit tests with CasperJs starting up...');
     $output = run("cd ~/internetdagarna/ && vendor/bin/phpunit");
     writeln($output);
-})->onlyOn('development');
-
-/**
- * Initialize a simple UI-test before deploying to production
- */
-task('tests', function () {
-    writeln('Running Vagrant tests...');
-    $output = runLocally("vagrant ssh -c \"cd ~/internetdagarna/ && vendor/bin/phpunit --verbose\"");
-    writeln($output);
-    run("rm -f {{deploy_path}}/.dep/deploy.lock");
-})->onlyOn('production');
-
-/**
- * This will ensure test before deploying
- */
-before('deploy', 'tests');
+})->onlyOn('dev');
