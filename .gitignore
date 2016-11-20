@@ -2,3 +2,7 @@
 .vagrant
 .env
 public/wp
+public/wp-content/languages
+public/wp-content/plugin
+public/wp-content/uploads
+

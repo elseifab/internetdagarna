@@ -45,3 +45,24 @@ Uppdatera /etc/hosts (OSX)
 ```
 vagrant up
 ```
+Krånglar miljön? Starta om Vagrantboxen:
+```
+vagrant reload --provision
+```
+
+## PHP Deployer
+Vi använder [PHP Deployer](https://deployer.org/) och [WP CLI](https://wp-cli.org/) för att initiera ny webbplats.
+```
+vendor/bin/dep startup dev
+```
+Initierar WordPress-installation i din Vagrantbox samt sätter ett testtema som aktivt.
+
+Logga in i wp-admin: [`http://internetdagarna.dev/wp/wp-admin`](http://internetdagarna.dev/wp/wp-admin) med `admin` och `lösenord` admin.
+
+```
+vendor/bin/dep testdata dev
+```
+Fyller din WordPress-webbplats med testdata.
+
+
+
