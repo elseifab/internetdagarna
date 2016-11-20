@@ -4,11 +4,19 @@ use Browser\Casper;
 
 class SimpleTest extends TestCase
 {
+    private static $casperBinPath = '/usr/bin/';
+
+    public static function setUpBeforeClass() {
+        if (!file_exists(self::$casperBinPath .  'casperjs')) {
+            self::$casperBinPath = 'node_modules/casperjs/bin/';
+        }
+    }
 
     public function testPageContent()
     {
+        throw new Exception("OK!");
 
-        $casper = new Casper();
+        $casper = new Casper(self::$casperBinPath);
 
         $screenshotFileName = "startpage-" . date('Y-m-d-H-i-s') . ".png";
 
@@ -21,7 +29,6 @@ class SimpleTest extends TestCase
         $result = $casper->getOutput();
 
         $this->assertContains("found text \"Internetdagarna\"", $result);
-
     }
 
 }

@@ -7,3 +7,6 @@ public/wp-content/plugin
 public/wp-content/uploads
 tests/ui/.reports
 !tests/ui/.reports/.gitkeep
+.dep
+public/wp-content/plugins
+public/wp-content/themes/twentysixteen

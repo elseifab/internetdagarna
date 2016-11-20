@@ -65,13 +65,20 @@ vendor/bin/dep testdata dev
 Fyller din WordPress-webbplats med testdata.
 
 ## Test
-Vi använder [PHPUnit](https://phpunit.de/) och i detta fall ett mycket enkelt UI-test med hjälp av [CasperJS]() som genererar en bild på testet.
+Vi använder [PHPUnit](https://phpunit.de/) och i detta fall ett mycket enkelt UI-test med hjälp av [CasperJS](http://casperjs.org/) som genererar en bild på testet.
 CaperJS kräver [Node](https://nodejs.org/en/) i global installation.
+
+Selenium (Javabaserat) är ett annat verktyg för UI-test men eftersom vi ofta ändå använder Node så är CasperJS närmare till hands och dessutom betydligt enklare.
+
 
 Installationsexempel:
 ```
-npm install -g phantomjs
-npm install -g casperjs
+sudo npm install -g phantomjs
+sudo npm install -g casperjs
 ```
 
-För att dra igång ett test som ligger under `tests/`
+```
+vendor/bin/dep tests dev
+```
+Drar igång UI-test i din Vagrantbox.
+

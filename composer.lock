@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f6522466e8505304f2d4a422a34e85d",
-    "content-hash": "12ab8e47bab67de46fc5d112087b5f32",
+    "hash": "1c3e9c69eeda86c409008f0ab0fd180f",
+    "content-hash": "ea92a5d9bb4986430ddfe6302abdbb60",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1718,6 +1718,46 @@
                 "wordpress"
             ],
             "time": "2016-10-25 15:14:00"
+        },
+        {
+            "name": "wpackagist-plugin/ilmenite-cookie-consent",
+            "version": "1.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ilmenite-cookie-consent/",
+                "reference": "tags/1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ilmenite-cookie-consent.1.1.1.zip",
+                "reference": "tags/1.1.1",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ilmenite-cookie-consent/"
+        },
+        {
+            "name": "wpackagist-theme/twentysixteen",
+            "version": "1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/twentysixteen/",
+                "reference": "1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/twentysixteen.1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "homepage": "https://wordpress.org/themes/twentysixteen/"
         }
     ],
     "packages-dev": [
