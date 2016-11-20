@@ -50,7 +50,7 @@ Krånglar miljön? Starta om Vagrantboxen:
 vagrant reload --provision
 ```
 
-## PHP Deployer
+## Deployment
 Vi använder [PHP Deployer](https://deployer.org/) och [WP CLI](https://wp-cli.org/) för att initiera ny webbplats.
 ```
 vendor/bin/dep startup dev
@@ -64,5 +64,14 @@ vendor/bin/dep testdata dev
 ```
 Fyller din WordPress-webbplats med testdata.
 
+## Test
+Vi använder [PHPUnit](https://phpunit.de/) och i detta fall ett mycket enkelt UI-test med hjälp av [CasperJS]() som genererar en bild på testet.
+CaperJS kräver [Node](https://nodejs.org/en/) i global installation.
 
+Installationsexempel:
+```
+npm install -g phantomjs
+npm install -g casperjs
+```
 
+För att dra igång ett test som ligger under `tests/`
