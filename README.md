@@ -57,7 +57,7 @@ vendor/bin/dep startup dev
 ```
 Initierar WordPress-installation i din Vagrantbox samt sätter ett testtema som aktivt.
 
-Logga in i wp-admin: [`http://internetdagarna.dev/wp/wp-admin`](http://internetdagarna.dev/wp/wp-admin) med `admin` och `lösenord` admin.
+Logga in i wp-admin: [`http://internetdagarna.dev/wp/wp-admin`](http://internetdagarna.dev/wp/wp-admin) med `admin` och lösenord `admin`.
 
 ```
 vendor/bin/dep testdata dev
@@ -82,3 +82,13 @@ vendor/bin/dep tests dev
 ```
 Drar igång UI-test i din Vagrantbox.
 
+## Deployment Production
+```
+vendor/bin/dep deploy production
+```
+Skapar en ny release på produktionsservern. Grundkraven är att destinationen har Git och Composer installerat.
+Vidare behöver en shared/.env samt installerad databas. Det går att initiera WordPressinstallationen med tidigare `startup`, ex:
+```
+vendor/bin/dep startup production
+```
+Observera att databas och .env måste finnas på servern. Kom ihåg att ändra admin-lösenordet!

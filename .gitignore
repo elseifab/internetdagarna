@@ -3,8 +3,9 @@
 .env
 public/wp
 public/wp-content/languages
-public/wp-content/plugin
+public/wp-content/plugins
 public/wp-content/uploads
+public/wp-content/upgrade
 tests/ui/.reports
 !tests/ui/.reports/.gitkeep
 .dep
