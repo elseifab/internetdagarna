@@ -26,20 +26,20 @@ server('production', 'elseif.se', 22)
 
 /**
  * Initialize the WordPress install in our Vagrant
- * Call it with `vendor/bin/dep startup dev`
+ * Call it with `vendor/bin/dep initwp dev`
  */
-task('startup', function() {
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp core install --url=internetdagarna.app --title=Internetdagarna --admin_user=admin --admin_password=admin --admin_email=andreas@elseif.se");
+task('initwp', function() {
+    $output = run("vendor/bin/wp core install --url=internetdagarna.app --title=Internetdagarna --admin_user=admin --admin_password=admin --admin_email=andreas@elseif.se");
     writeln($output);
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp core language install sv_SE --activate");
+    $output = run("vendor/bin/wp core language install sv_SE --activate");
     writeln($output);
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp theme activate twentysixteen");
+    $output = run("vendor/bin/wp theme activate twentysixteen");
     writeln($output);
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp plugin activate ilmenite-cookie-consent");
+    $output = run("vendor/bin/wp plugin activate ilmenite-cookie-consent");
     writeln($output);
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp rewrite structure %postname%");
+    $output = run("vendor/bin/wp rewrite structure %postname%");
     writeln($output);
-    $output = run("cd {{deploy_path}}/current && vendor/bin/wp rewrite flush");
+    $output = run("vendor/bin/wp rewrite flush");
     writeln($output);
 });
 
