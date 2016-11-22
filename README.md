@@ -9,6 +9,12 @@ Koden ska ses som ett "proof-of-concept" på en strukturerad miljö för utveckl
 
 Syftet är att ge en inblick och förståelse för hur utveckling med WordPress kan automatiseras och göras med kontrollerat upplägg med versionshantering, pakethantering, deployment och test.
 
+## Länkar efter presentationen
+Några frågor kring presentationen visade på intressanta uppslag:
+
+[Roots](https://roots.io/): [Trellis - Vagrantmiljö](https://roots.io/trellis/), [Bedrock - paketstruktur](https://roots.io/bedrock/), [Sage - tema](https://roots.io/sage/)
+[Laravel Forge](https://forge.laravel.com/), funkar fint för denna typ av WordPress-upplägg.
+
 ## Grundkrav
 * PHP
 * Composer
