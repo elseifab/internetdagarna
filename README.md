@@ -18,13 +18,15 @@ Vi förutsätter att du har en dator med PHP installerat. Företrädesvis versio
 
 ## Snabba steg
 Om du vill få detta att rulla med snabba steg:
-1. `composer create-project elseif/internetdagarna`
-1. `cd internetdagarna`
-1. `cp .env.example .env`
-1. `vagrant up`
-1. (modifiera hosts-filen med: 192.168.10.13 => internetdagarna.dev)
-1. `vendor/bin/dep` initial dev
-1. (surfa till http://internetdagarna.dev)
+
+* `composer create-project elseif/internetdagarna`
+* `cd internetdagarna`
+* `cp .env.example .env`
+* `vagrant up`
+* (modifiera hosts-filen med: 192.168.10.13 => internetdagarna.dev)
+* `vendor/bin/dep` initial dev
+* (surfa till http://internetdagarna.dev)
+
 Mer om varje del nedan!
 
 ## Versionshantering
