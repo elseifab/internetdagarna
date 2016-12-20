@@ -32,6 +32,7 @@ Om du vill få detta att rulla med snabba steg:
 * `composer create-project elseif/internetdagarna`
 * `cd internetdagarna`
 * `cp .env.example .env`
+* (modifiera Homestead.yaml rad 15 till ditt projekts sökväg)
 * `vagrant up`
 * (modifiera hosts-filen med: 192.168.10.13 => internetdagarna.dev)
 * `vendor/bin/dep` initial dev
